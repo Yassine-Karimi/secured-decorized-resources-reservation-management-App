@@ -1,4 +1,4 @@
-![image](https://github.com/Yassine-Karimi/secured-decorized-resources-reservation-management-App/assets/66490404/fc497448-dd96-4ae1-a10b-469c8b225a13)## Overview of the Project
+## Overview of the Project
 
 This project is designed to develop a reservation management application following a microservices architecture. The primary goal is to efficiently handle reservations for various resources, with each reservation being associated with a specific resource.
 
@@ -127,26 +127,7 @@ For the overall application:
 │   │           └───net
 │   │               └───youssfi
 │   │                   └───discoveryservice
-│   └───target
-│       ├───classes
-│       │   └───net
-│       │       └───youssfi
-│       │           └───discoveryservice
-│       ├───generated-sources
-│       │   └───annotations
-│       ├───generated-test-sources
-│       │   └───test-annotations
-│       ├───maven-archiver
-│       ├───maven-status
-│       │   └───maven-compiler-plugin
-│       │       ├───compile
-│       │       │   └───default-compile
-│       │       └───testCompile
-│       │           └───default-testCompile
-│       └───test-classes
-│           └───net
-│               └───youssfi
-│                   └───discoveryservice
+│ 
 ├───gateway-service
 │   ├───.mvn
 │   │   └───wrapper
@@ -162,26 +143,7 @@ For the overall application:
 │   │           └───net
 │   │               └───youssfi
 │   │                   └───gatewayservice
-│   └───target
-│       ├───classes
-│       │   └───net
-│       │       └───youssfi
-│       │           └───gatewayservice
-│       ├───generated-sources
-│       │   └───annotations
-│       ├───generated-test-sources
-│       │   └───test-annotations
-│       ├───maven-archiver
-│       ├───maven-status
-│       │   └───maven-compiler-plugin
-│       │       ├───compile
-│       │       │   └───default-compile
-│       │       └───testCompile
-│       │           └───default-testCompile
-│       └───test-classes
-│           └───net
-│               └───youssfi
-│                   └───gatewayservice
+│   
 ├───reservation-service
 │   ├───.mvn
 │   │   └───wrapper
@@ -209,36 +171,7 @@ For the overall application:
 │   │           └───yas
 │   │               └───kr
 │   │                   └───reservationservice
-│   └───target
-│       ├───classes
-│       │   └───yas
-│       │       └───kr
-│       │           └───reservationservice
-│       │               ├───clients
-│       │               ├───dtos
-│       │               ├───entities
-│       │               ├───exceptions
-│       │               ├───mappers
-│       │               ├───model
-│       │               ├───repository
-│       │               ├───security
-│       │               ├───services
-│       │               └───web
-│       ├───generated-sources
-│       │   └───annotations
-│       ├───generated-test-sources
-│       │   └───test-annotations
-│       ├───maven-archiver
-│       ├───maven-status
-│       │   └───maven-compiler-plugin
-│       │       ├───compile
-│       │       │   └───default-compile
-│       │       └───testCompile
-│       │           └───default-testCompile
-│       └───test-classes
-│           └───yas
-│               └───kr
-│                   └───reservationservice
+│  
 └───resources-service
     ├───.mvn
     │   └───wrapper
@@ -262,26 +195,7 @@ For the overall application:
     │           └───yas
     │               └───kr
     │                   └───resourcesservice
-    └───target
-        ├───classes
-        │   └───yas
-        │       └───kr
-        │           └───resourcesservice
-        │               ├───dtos
-        │               ├───entities
-        │               ├───enums
-        │   └───test-annotations
-        ├───maven-archiver
-        ├───maven-status
-        │   └───maven-compiler-plugin
-        │       ├───compile
-        │       │   └───default-compile
-        │       └───testCompile
-        │           └───default-testCompile
-        └───test-classes
-            └───yas
-                └───kr
-                    └───resourcesservice
+   
 ```
 
 ## Eureka Service 
