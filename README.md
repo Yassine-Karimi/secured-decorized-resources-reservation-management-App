@@ -312,7 +312,7 @@ For the overall application:
     <td><img src="screenshots/9.png"/></td>
   </tr>
 </table>
-<be>
+<br>
 
 ## Reservation Service Swagger Doc:
 <table align="center">
@@ -354,6 +354,46 @@ For the overall application:
   <tr>
     <td><img src="screenshots/postreser.png"/></td>
     <td><img src="screenshots/postper.png"/></td>
+  </tr>
+</table>
+<br>
+## Resources Service Swagger Doc:
+<table align="center">
+  <tr>
+    <th>Reservation Rest API</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/apiresou.png"/></td>
+  </tr>
+     <tr>
+    <th>GET Resource</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/getresou.png"/></td>
+  </tr>
+     <tr>
+    <th>GET ALL  Resources</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/agetallresou.png"/></td>
+  </tr>
+     <tr>
+    <th>PUT Resource</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/putresou.png"/></td>
+  </tr>
+     <tr>
+    <th>DELETE Resource</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/delresou.png"/></td>
+  </tr>
+     <tr>
+    <th>POST Resource</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/postresou.png"/></td>
   </tr>
 </table>
 
