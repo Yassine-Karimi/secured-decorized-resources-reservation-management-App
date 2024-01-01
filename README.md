@@ -321,21 +321,39 @@ For the overall application:
     <th>Personne Rest API</th>
    </tr>
   <tr>
-    <td><img src="screenshots/15.png"/></td>
-    <td><img src="screenshots/16.png"/></td>
+    <td><img src="screenshots/apireser.png"/></td>
+    <td><img src="screenshots/apiper.png"/></td>
   </tr>
-    <th>Get Reservation</th>
-    <th>Post Personne</th>
+    <th>GET Reservation</th>
+    <th>GET Person</th>
   <tr>
-    <td><img src="screenshots/17.png"/></td>
-    <td><img src="screenshots/18.png"/></td>
+    <td><img src="screenshots/getreser.png"/></td>
+    <td><img src="screenshots/getper.png"/></td>
   </tr>
   </tr>
-    <th>Update Reservation</th>
-    <th>Delete Personne</th>
+    <th>GET ALL Reservations</th>
+    <th>GET ALL Persons</th>
   <tr>
-    <td><img src="screenshots/19.png"/></td>
-    <td><img src="screenshots/20.png"/></td>
+    <td><img src="screenshots/getallreser.png"/></td>
+    <td><img src="screenshots/getallper.png"/></td>
+  </tr>
+     <th>PUT Reservation</th>
+     <th>PUT Person</th>
+  <tr>
+    <td><img src="screenshots/putreser.png"/></td>
+    <td><img src="screenshots/putper.png"/></td>
+  </tr>
+     <th>DELETE Reservation</th>
+    <th>DELETE Person</th>
+  <tr>
+    <td><img src="screenshots/delreser.png"/></td>
+    <td><img src="screenshots/delper.png"/></td>
+  </tr>
+     <th>POST Reservation</th>
+    <th>POST Person</th>
+  <tr>
+    <td><img src="screenshots/postreser.png"/></td>
+    <td><img src="screenshots/postper.png"/></td>
   </tr>
 </table>
 
