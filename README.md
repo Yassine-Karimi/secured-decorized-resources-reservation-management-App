@@ -21,6 +21,16 @@ For the overall application:
 - Security protocols will be based on OAuth2 and OIDC, with Keycloak serving as the identity provider.
 - Microservices will generate RESTful web service documentation using the OpenAPI Specification Swagger.
 - Circuit breakers, implemented through Resilience4J, will enhance fault tolerance within the system.
+- 
+## Outils
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](	https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot)
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Keycloak](https://img.shields.io/badge/keycloak-%23334D5E.svg?style=for-the-badge&logo=keycloak&logoColor=white)
+
+
 
 ## App Tree Architect:
 
