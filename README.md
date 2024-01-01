@@ -357,7 +357,9 @@ For the overall application:
   </tr>
 </table>
 <br>
+
 ## Resources Service Swagger Doc:
+
 <table align="center">
   <tr>
     <th>Reservation Rest API</th>
