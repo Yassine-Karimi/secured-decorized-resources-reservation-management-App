@@ -1,4 +1,4 @@
-## Overview of the Project
+![image](https://github.com/Yassine-Karimi/secured-decorized-resources-reservation-management-App/assets/66490404/fc497448-dd96-4ae1-a10b-469c8b225a13)## Overview of the Project
 
 This project is designed to develop a reservation management application following a microservices architecture. The primary goal is to efficiently handle reservations for various resources, with each reservation being associated with a specific resource.
 
@@ -297,6 +297,19 @@ For the overall application:
   <tr>
     <td><img src="screenshots/7.png"/></td>
     <td><img src="screenshots/8.png"/></td>
+  </tr>
+</table>
+<be>
+
+## Gateway Service
+<table align="center">
+  <tr>
+    <th>Gateway Architect</th>
+    <th>Gateway health</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/10.png"/></td>
+    <td><img src="screenshots/9.png"/></td>
   </tr>
 </table>
 <br>
