@@ -287,3 +287,16 @@ For the overall application:
   </tr>
 </table>
 <br>
+
+## Config Service
+<table align="center">
+  <tr>
+    <th>Config Actuator</th>
+    <th>Gateway Actuator</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/8.png"/></td>
+    <td><img src="screenshots/7.png"/></td>
+  </tr>
+</table>
+<br>
