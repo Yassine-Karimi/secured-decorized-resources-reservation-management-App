@@ -1,0 +1,22 @@
+.add {
+  margin-left: 88%;
+  height: 10%;
+}
+.pltf{
+  margin-left: 6%;
+}
+@media (max-width: 767px) {
+  .table-responsive  .mobile
+  {
+    display: none;
+  }
+  .pltf{
+    margin-left: 0px;
+  }
+  .add{
+    margin-left: 35%;
+    height: 10%;
+    display: block;
+  }
+}
+

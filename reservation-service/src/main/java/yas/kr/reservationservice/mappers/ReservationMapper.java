@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import yas.kr.reservationservice.entities.Reservation;
 import yas.kr.reservationservice.dtos.ReservationDTORequest;
 import yas.kr.reservationservice.dtos.ReservationDTOResponse;
+import yas.kr.reservationservice.model.Resource;
 
 @Service
 public class ReservationMapper {
@@ -20,4 +21,6 @@ public class ReservationMapper {
     public ReservationDTOResponse reservationToReservationDTOResponse(Reservation entity) {
         return modelMapper.map(entity, ReservationDTOResponse.class);
     }
+
+
 }

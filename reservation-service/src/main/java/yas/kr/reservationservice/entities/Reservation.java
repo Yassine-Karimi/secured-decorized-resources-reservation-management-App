@@ -2,14 +2,12 @@ package yas.kr.reservationservice.entities;
 // Reservation.java
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import yas.kr.reservationservice.model.Resource;
 
 import java.time.LocalDate;
 
@@ -29,6 +27,11 @@ public class Reservation {
     private LocalDate date;
     private int duration;
     private Long resourceId;
+    @ManyToOne
+    private Person person;
+   @Transient
+    private Resource ressource;
+
 
 
 }

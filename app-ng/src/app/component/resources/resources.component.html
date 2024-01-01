@@ -1,0 +1,102 @@
+<div class="d-flex align-items-center" >
+  <h4><b><img height="30px" src="assets/img/resources.png">Resources</b></h4>
+</div>
+
+<ng-template #errors>
+  <div *ngIf="errMessage === 'Data Not Found!'" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <img style="margin-left: 25%" src="assets/img/progress-icon-gif-21.jpg">
+    <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</ng-template>
+
+
+
+<div class="row m-lg-3">
+  <div class=" pltf col-16 col-xl-10">
+    <div class="card card-body border-0 shadow mb-4">
+
+      <div class=" mb-4">
+        <div class="card border-0 shadow">
+          <div class="card-header">
+            <div class="row align-items-center">
+
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table ">
+              <thead class="thead-light">
+              <tr >
+
+                <th class="border-bottom mobile" scope="col">ID</th>
+                <th class="border-bottom " scope="col">NAME</th>
+                <th class="border-bottom " scope="col">Type</th>
+
+                <th class="border-bottom" scope="col">ACTION</th>
+
+
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let c of resources" >
+
+                <td class="mobile">{{c.id}}</td>
+                <td >{{c.name}}</td>
+
+                <td >{{c.type}}</td>
+
+
+                <td >
+                  <!--                  <button (click)="handleSetPayed(c)"  class="btn btn-sm">-->
+                  <!--                    <span *ngIf="c.etat==true">✅</span>-->
+                  <!--                    <span *ngIf="c.etat ==false">❌</span>-->
+                  <!--                  </button>-->
+                  <a (click)="handledeleteClient(c)" class="m-2" data-bs-toggle="tooltip" title="Delete Admin">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0,0,256,256"
+                         style="fill:#000000;">
+                      <g fill="#e11d1d" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M28,11c-1.105,0 -2,0.895 -2,2v1h-13c-1.104,0 -2,0.896 -2,2c0,1.104 0.896,2 2,2h1.16016l2.54102,30.49805c0.256,3.085 2.88447,5.50195 5.98047,5.50195h18.63672c3.096,0 5.72347,-2.41695 5.98047,-5.50195l2.54102,-30.49805h1.16016c1.104,0 2,-0.896 2,-2c0,-1.104 -0.896,-2 -2,-2h-13v-1c0,-1.105 -0.895,-2 -2,-2zM18.17383,18h27.6543l-2.51562,30.16602c-0.086,1.028 -0.96019,1.83398 -1.99219,1.83398h-18.63867c-1.033,0 -1.90914,-0.80598 -1.99414,-1.83398z"></path></g></g>
+                    </svg>
+                  </a>
+
+                  <a (click)="handleEditClient(c)"  class="m-2" data-bs-toggle="tooltip" title="Edit Admin">
+                    <svg height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z" fill="#6563ff"/></svg>
+
+
+                  </a>
+                  <a (click)="showNoteInfo(c)"  class="m-2" data-bs-toggle="tooltip" title="Show Note">
+                    <svg fill="none" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M3.25909 11.6021C3.94254 8.32689 6.79437 6 10 6C13.2057 6 16.0574 8.32688 16.7409 11.6021C16.7974 11.8725 17.0622 12.0459 17.3325 11.9895C17.6029 11.933 17.7763 11.6682 17.7199 11.3979C16.9425 7.67312 13.6934 5 10 5C6.3066 5 3.05742 7.67311 2.28017 11.3979C2.22377 11.6682 2.39718 11.933 2.6675 11.9895C2.93782 12.0459 3.20268 11.8725 3.25909 11.6021Z" fill="#212121"/><path d="M10 8C8.067 8 6.5 9.567 6.5 11.5C6.5 13.433 8.067 15 10 15C11.933 15 13.5 13.433 13.5 11.5C13.5 9.567 11.933 8 10 8ZM7.5 11.5C7.5 10.1193 8.61929 9 10 9C11.3807 9 12.5 10.1193 12.5 11.5C12.5 12.8807 11.3807 14 10 14C8.61929 14 7.5 12.8807 7.5 11.5Z" fill="#212121"/></svg>
+
+                  </a>
+                </td>
+
+              </tr>
+
+              </tbody>
+            </table>
+
+            <nav aria-label="Page navigation example" class="m-3">
+              <ul class="pagination pagination-sm">
+                <li class="page-item">
+                  <a class="page-link" aria-label="Previous" (click)="previousPage()">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item" >
+                  <p class="page-link" >Page {{ currentPage + 1 }} of {{ totalPages }}</p>
+                <li class="page-item">
+                  <a class="page-link" aria-label="Next" (click)="nextPage()" >
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+
+              </ul>
+              <button class="add btn btn-info"  aria-expanded="false" (click)="handleAddClient()">
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16.7488 2C17.9915 2 18.9988 3.00736 18.9988 4.25V19.75C18.9988 20.9926 17.9915 22 16.7488 22H11.1904C12.3112 20.8321 13 19.2465 13 17.5C13 13.9101 10.0899 11 6.5 11C5.6141 11 4.76959 11.1772 4 11.4982V4.25C4 3.00736 5.00736 2 6.25 2H16.7488ZM14.7536 5.49739H8.25136C7.87167 5.49739 7.55787 5.77954 7.50821 6.14562L7.50136 6.24739V7.75097C7.50136 8.13067 7.78352 8.44446 8.14959 8.49412L8.25136 8.50097H14.7536C15.1333 8.50097 15.4471 8.21882 15.4968 7.85274L15.5036 7.75097V6.24739C15.5036 5.83317 15.1678 5.49739 14.7536 5.49739ZM20 15.0019H20.75C21.1297 15.0019 21.4435 15.2841 21.4932 15.6502L21.5 15.7519V17.25C21.5 17.6297 21.2178 17.9435 20.8518 17.9932L20.75 18H20V15.0019ZM20 11.0019H20.75C21.1297 11.0019 21.4435 11.2841 21.4932 11.6502L21.5 11.7519V13.25C21.5 13.6297 21.2178 13.9435 20.8518 13.9932L20.75 14H20V11.0019ZM20 7.00194H20.75C21.1297 7.00194 21.4435 7.28409 21.4932 7.65017L21.5 7.75194V9.25C21.5 9.6297 21.2178 9.94349 20.8518 9.99315L20.75 10H20V7.00194ZM12 17.5C12 14.4624 9.53757 12 6.5 12C3.46243 12 1 14.4624 1 17.5C1 20.5376 3.46243 23 6.5 23C9.53757 23 12 20.5376 12 17.5ZM7.00065 18L7.00111 20.5035C7.00111 20.7797 6.77725 21.0035 6.50111 21.0035C6.22497 21.0035 6.00111 20.7797 6.00111 20.5035L6.00065 18H3.4956C3.21973 18 2.99609 17.7762 2.99609 17.5C2.99609 17.2239 3.21973 17 3.4956 17H6.00046L6 14.4993C6 14.2231 6.22386 13.9993 6.5 13.9993C6.77614 13.9993 7 14.2231 7 14.4993L7.00046 17H9.49659C9.77246 17 9.99609 17.2239 9.99609 17.5C9.99609 17.7762 9.77246 18 9.49659 18H7.00065Z" fill="#212121"/></svg>                </button>
+
+            </nav>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,13 +1,12 @@
 package yas.kr.reservationservice.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Data
@@ -23,6 +22,8 @@ public class Person {
     private String name;
     private String email;
     private String role;
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
+    private List<Reservation> reservations;
 
     // Getters et setters
 
