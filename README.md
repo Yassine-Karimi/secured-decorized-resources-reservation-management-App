@@ -403,3 +403,136 @@ For the overall application:
   </tr>
 </table>
 
+## Full App Dockerisation:
+```yaml
+services:
+  exam-discovery-service:
+    #The docker file in scrum-app build the jar and provides the docker image with the following name.
+    build: ./discovery-service
+    container_name: exam-discovery-service
+    ports:
+      - '8761:8761'
+    expose:
+      - '8761'
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8761/actuator/health" ]
+      interval: 10s
+      retries: 5
+  exam-config-service:
+    build: ./config-service
+    container_name: exam-config-service
+    ports:
+      - '9999:9999'
+    expose:
+      - '9999'
+    depends_on:
+      exam-discovery-service:
+        condition: service_healthy
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9999/actuator/health" ]
+      interval: 10s
+      retries: 5
+    environment:
+      - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
+
+  exam-resources-service:
+    build: ./resources-service
+    container_name: exam-resources-service
+    ports:
+      - '8081:8081'
+    expose:
+      - '8081'
+    depends_on:
+      exam-config-service:
+        condition: service_healthy
+#    healthcheck:
+#      test: [ "CMD", "curl", "-f", "http://localhost:8081/actuator/health" ]
+    environment:
+      - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
+      - CONFIG_SERVER_URL=http://exam-config-service:9999/
+  exam-reservation-service:
+    build: ./reservation-service
+    container_name: exam-reservation-service
+    ports:
+      - '8082:8082'
+    expose:
+      - '8082'
+    depends_on:
+      - exam-resources-service
+    environment:
+      - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
+      - CONFIG_SERVER_URL=http://exam-config-service:9999/
+
+  exam-gateway-service:
+    build: ./gateway-service
+    container_name: exam-gateway-service
+    ports:
+      - '8899:8888'
+    expose:
+      - '8899'
+    depends_on:
+      exam-config-service:
+        condition: service_healthy
+    environment:
+      - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
+      - CONFIG_SERVER_URL=http://exam-config-service:9999/
+
+  postgres-service:
+    image: postgres
+    container_name: postgres-service
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: k1234
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
+    healthcheck:
+      test: "exit 0"
+  pgadmin4:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: keycloak@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: azer
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres-service:5432/keycloak
+      KC_DB_USERNAME: keycloak
+      KC_DB_PASSWORD: k1234
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command:
+      - start-dev
+    restart: always
+    ports:
+      - '8080:8080'
+    expose:
+      - '8080'
+    depends_on:
+      postgres-service:
+        condition: service_healthy
+  app-ng:
+    build: ./app-ng
+    container_name: exam-app-ng
+    ports:
+      - '8085:4200'
+    expose:
+      - '8085'
+    restart: always
+
+volumes:
+  postgres-data:
+  pgadmin-data:
+```
