@@ -26,7 +26,7 @@ services:
       interval: 10s
       retries: 5
     environment:
-      - DISCOVERY_SERVICE_URL=http://bank-discovery-service:8761/eureka
+      - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
 
   exam-resources-service:
     build: ./resources-service
@@ -38,11 +38,11 @@ services:
     depends_on:
       exam-config-service:
         condition: service_healthy
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:8081/actuator/health" ]
+#    healthcheck:
+#      test: [ "CMD", "curl", "-f", "http://localhost:8081/actuator/health" ]
     environment:
-      - DISCOVERY_SERVICE_URL=http://bank-discovery-service:8761/eureka
-      - CONFIG_SERVER_URL=http://bank-config-service:9999/
+      - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
+      - CONFIG_SERVER_URL=http://exam-config-service:9999/
   exam-reservation-service:
     build: ./reservation-service
     container_name: exam-reservation-service
@@ -51,11 +51,10 @@ services:
     expose:
       - '8082'
     depends_on:
-      exam-customer-service:
-        condition: service_healthy
+      - exam-resources-service
     environment:
       - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
-      - CONFIG_SERVER_URL=http://bank-config-service:9999/
+      - CONFIG_SERVER_URL=http://exam-config-service:9999/
 
   exam-gateway-service:
     build: ./gateway-service
@@ -65,7 +64,7 @@ services:
     expose:
       - '8899'
     depends_on:
-      bank-config-service:
+      exam-config-service:
         condition: service_healthy
     environment:
       - DISCOVERY_SERVICE_URL=http://exam-discovery-service:8761/eureka
@@ -76,7 +75,7 @@ services:
     image: postgres
     container_name: postgres-service
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: keycloak
       POSTGRES_USER: keycloak
@@ -94,10 +93,10 @@ services:
     ports:
       - "8888:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: keycloak
+      PGADMIN_DEFAULT_EMAIL: keycloak@gmail.com
       PGADMIN_DEFAULT_PASSWORD: azer
     volumes:
-      - pgadmin_data:/var/lib/pgadmin
+      - pgadmin-data:/var/lib/pgadmin
   keycloak:
     image: quay.io/keycloak/keycloak:latest
     container_name: keycloak
@@ -118,3 +117,15 @@ services:
     depends_on:
       postgres-service:
         condition: service_healthy
+  app-ng:
+    build: ./app-ng
+    container_name: exam-app-ng
+    ports:
+      - '8085:4200'
+    expose:
+      - '8085'
+    restart: always
+
+volumes:
+  postgres-data:
+  pgadmin-data:
