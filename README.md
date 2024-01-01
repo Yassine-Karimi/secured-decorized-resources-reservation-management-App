@@ -403,6 +403,46 @@ For the overall application:
   </tr>
 </table>
 
+
+## Angular Frontend:
+
+<table align="center">
+  <tr>
+    <th>Login With Keycloack</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/loginkc.png"/></td>
+  </tr>
+     <tr>
+    <th>Welcom Mockup</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/mocwel.png"/></td>
+  </tr>
+     <tr>
+    <th>Resources Management Mockup</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/mocresou.png"/></td>
+  </tr>
+     <tr>
+    <th>Reservations Management Mockup</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/mocreser.png"/></td>
+  </tr>
+     <tr>
+    <th>Persons Management Mockup</th>
+  </tr>
+  <tr>
+    <td><img src="screenshots/mocper.png"/></td>
+  </tr>
+    
+</table>
+<br>
+
+
+
 ## Full App Dockerisation:
 ```yaml
 services:
