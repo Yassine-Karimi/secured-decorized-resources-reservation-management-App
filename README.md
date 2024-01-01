@@ -411,7 +411,7 @@ For the overall application:
     <th>Login With Keycloack</th>
   </tr>
   <tr>
-    <td><img src="screenshots/loginkc.png"/></td>
+    <td><img src="screenshots/logingkc.png"/></td>
   </tr>
      <tr>
     <th>Welcom Mockup</th>
