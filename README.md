@@ -283,7 +283,7 @@ For the overall application:
 ## Eureka Service 
 <table align="center">
 
-   <td><img src="[screens/eureka.png](https://github.com/Yassine-Karimi/secured-decorized-resources-reservation-management-App/assets/66490404/80d0f0b3-f691-4243-b7e8-664711122edc)https://github.com/Yassine-Karimi/secured-decorized-resources-reservation-management-App/assets/66490404/80d0f0b3-f691-4243-b7e8-664711122edc"/></td>
+   <td><img src="screenshots/img.png"/></td>
   </tr>
 </table>
 <br>
