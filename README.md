@@ -312,4 +312,30 @@ For the overall application:
     <td><img src="screenshots/9.png"/></td>
   </tr>
 </table>
-<br>
+<be>
+
+## Reservation Service Swagger Doc:
+<table align="center">
+  <tr>
+    <th>Reservation Rest API</th>
+    <th>Personne Rest API</th>
+   </tr>
+  <tr>
+    <td><img src="screenshots/15.png"/></td>
+    <td><img src="screenshots/16.png"/></td>
+  </tr>
+    <th>Get Reservation</th>
+    <th>Post Personne</th>
+  <tr>
+    <td><img src="screenshots/17.png"/></td>
+    <td><img src="screenshots/18.png"/></td>
+  </tr>
+  </tr>
+    <th>Update Reservation</th>
+    <th>Delete Personne</th>
+  <tr>
+    <td><img src="screenshots/19.png"/></td>
+    <td><img src="screenshots/20.png"/></td>
+  </tr>
+</table>
+
