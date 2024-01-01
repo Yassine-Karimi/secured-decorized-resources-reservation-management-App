@@ -374,10 +374,10 @@ For the overall application:
     <td><img src="screenshots/getresou.png"/></td>
   </tr>
      <tr>
-    <th>GET ALL  Resources</th>
+    <th>GET ALL Resources</th>
    </tr>
   <tr>
-    <td><img src="screenshots/agetallresou.png"/></td>
+    <td><img src="screenshots/getallresou.png"/></td>
   </tr>
      <tr>
     <th>PUT Resource</th>
