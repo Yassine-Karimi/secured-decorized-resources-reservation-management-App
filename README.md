@@ -40,23 +40,6 @@ For the overall application:
 
 ```bash
 ├───app-ng
-│   ├───.angular
-│   │   └───cache
-│   │       └───17.0.8
-│   │           ├───angular-webpack
-│   │           │   ├───37adeeb720adad8fa4ae080264c27bb01d6d29de
-│   │           │   ├───408bf4a2ff9333ba12aa88d2aa40a2cdaff0ee80
-│   │           │   └───6a78ae494bfa0410eaa3259b7efa0e385ca22404
-│   │           └───babel-webpack
-│   ├───.firebase
-│   ├───.idea
-│   ├───.vscode
-│   ├───dist
-│   │   └───app-ng
-│   │       └───assets
-│   │           ├───css
-│   │           ├───img
-│   │           └───js
 │   ├───public
 │   └───src
 │       ├───app
@@ -87,31 +70,7 @@ For the overall application:
 │   │   │   │       └───youssfi
 │   │   │   │           └───configservice
 │   │   │   └───resources
-│   │   └───test
-│   │       └───java
-│   │           └───net
-│   │               └───youssfi
-│   │                   └───configservice
-│   └───target
-│       ├───classes
-│       │   └───net
-│       │       └───youssfi
-│       │           └───configservice
-│       ├───generated-sources
-│       │   └───annotations
-│       ├───generated-test-sources
-│       │   └───test-annotations
-│       ├───maven-archiver
-│       ├───maven-status
-│       │   └───maven-compiler-plugin
-│       │       ├───compile
-│       │       │   └───default-compile
-│       │       └───testCompile
-│       │           └───default-testCompile
-│       └───test-classes
-│           └───net
-│               └───youssfi
-│                   └───configservice
+
 ├───discovery-service
 │   ├───.mvn
 │   │   └───wrapper
@@ -166,11 +125,6 @@ For the overall application:
 │   │   │   └───resources
 │   │   │       ├───static
 │   │   │       └───templates
-│   │   └───test
-│   │       └───java
-│   │           └───yas
-│   │               └───kr
-│   │                   └───reservationservice
 │  
 └───resources-service
     ├───.mvn
