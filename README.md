@@ -291,8 +291,8 @@ For the overall application:
 ## Config Service
 <table align="center">
   <tr>
-    <th>Config Actuator</th>
-    <th>Gateway Actuator</th>
+    <th>Config Architect</th>
+    <th>Config Test</th>
   </tr>
   <tr>
     <td><img src="screenshots/7.png"/></td>
