@@ -295,8 +295,8 @@ For the overall application:
     <th>Gateway Actuator</th>
   </tr>
   <tr>
-    <td><img src="screenshots/8.png"/></td>
     <td><img src="screenshots/7.png"/></td>
+    <td><img src="screenshots/8.png"/></td>
   </tr>
 </table>
 <br>
