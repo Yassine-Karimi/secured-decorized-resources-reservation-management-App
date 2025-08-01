@@ -1,3 +1,4 @@
+<!--
 ## Overview of the Project
 
 This project is designed to develop a reservation management application following a microservices architecture. The primary goal is to efficiently handle reservations for various resources, with each reservation being associated with a specific resource.
@@ -271,7 +272,7 @@ For the overall application:
   </tr>
 </table>
 
-
+-->
 ## Angular Frontend:
 
 <table align="center">
